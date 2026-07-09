@@ -30,7 +30,7 @@ async function updateMyEvent(page, eventTitle) {
     // Step 5 — booking form (using the spec's locators):
 await expect(page.locator('#ticket-count')).toHaveText('1');     // assert default quantity
 await page.getByLabel('Full Name').fill('Arun Barigiriraj');
-await page.locator('#customer-email').fill('process.env.EVENTHUB_EMAIL);
+await page.locator('#customer-email').fill(process.env.EVENTHUB_EMAIL);
 await page.getByPlaceholder('+91 98765 43210').fill('1234567890');
 await page.locator('.confirm-booking-btn').click();
 // Step 6 — verify booking confirmation (this ASSERTS the booking worked):
