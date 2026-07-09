@@ -19,6 +19,14 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+      env:
+         EVENTHUB_EMAIL=iamarunshbarigiriraj@gmail.com
+         EVENTHUB_PASSWORD=Arun123456!
+         SAUCEDEMO_USERNAME=standard_user
+         SAUCEDEMO_PASSWORD=secret_sauce
+         PRACTICE_USERNAME=practice
+         PRACTICE_PASSWORD=SuperSecretPassword!
+
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
