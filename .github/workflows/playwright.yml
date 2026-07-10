@@ -20,8 +20,8 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
       env:
-        SAUCEDEMO_USERNAME: standard_user
-        SAUCEDEMO_PASSWORD: secret_sauce
+        SAUCEDEMO_USERNAME: ${{ secrets.SAUCEDEMO_USERNAME }}
+        SAUCEDEMO_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD }}
         PRACTICE_USERNAME: ${{ secrets.PRACTICE_USERNAME }}
         PRACTICE_PASSWORD: ${{ secrets.PRACTICE_PASSWORD }}
         EVENTHUB_EMAIL: ${{ secrets.EVENTHUB_EMAIL }}
