@@ -36,13 +36,13 @@ export default defineConfig({
 
 
   /* Configure projects for major browsers */
- projects: [
+ 
+projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'], headless: !!process.env.CI },
     },
   ],
-
   
 
     /* Test against mobile viewports. */
@@ -64,7 +64,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
+  
 
   /* Run your local dev server before starting the tests */
   // webServer: {
