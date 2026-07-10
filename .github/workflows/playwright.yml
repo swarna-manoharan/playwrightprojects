@@ -19,7 +19,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
-      eenv:
+      env:
         SAUCEDEMO_USERNAME: ${{ secrets.SAUCEDEMO_USERNAME }}
         SAUCEDEMO_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD }}
         PRACTICE_USERNAME: ${{ secrets.PRACTICE_USERNAME }}
